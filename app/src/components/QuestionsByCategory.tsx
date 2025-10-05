@@ -24,9 +24,9 @@ export default function QuestionsByCategory({questions}:{questions:Question[]}) 
     }
 
     return <div>
-            <div>By Category</div>
-            <PieChart width={500} height={500}>
-                <Pie data={data} label={renderLabel} dataKey="value" />
+            <div className="Subheading">Questions By Category</div>
+            <PieChart width={600} height={300}>
+                <Pie data={data} label={renderLabel} dataKey="value" style={{fontSize:"0.6rem"}}/>
             </PieChart>
         </div>
 }

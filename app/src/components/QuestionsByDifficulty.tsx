@@ -23,9 +23,9 @@ export default function QuestionsByDifficulty({questions}:{questions:Question[]}
     }
 
     return <div>
-            <div>By Difficulty</div>
-            <PieChart width={500} height={500}>
-                <Pie data={data} label={renderLabel} dataKey="value" />
+            <div className="Subheading">Questions By Difficulty</div>
+            <PieChart width={600} height={300}>
+                <Pie data={data} label={renderLabel} dataKey="value" style={{fontSize:"0.8rem"}}/>
             </PieChart>
         </div>
 }
