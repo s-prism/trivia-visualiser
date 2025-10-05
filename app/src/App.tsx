@@ -4,6 +4,7 @@ import CategoryList from './components/CategoryList.tsx'
 import QuestionsForCategory from './components/QuestionsForCategory.tsx';
 import { Question, QuestionsResponse } from './types.tsx';
 import QuestionsByDifficulty from './components/QuestionsByDifficulty.tsx';
+import QuestionsByCategory from './components/QuestionsByCategory.tsx';
 
 function App() {
   const [questions,setQuestions] = useState<Question[]>([]);
@@ -24,7 +25,10 @@ function App() {
       <header className="App-header">
         <CategoryList onClick={setCategory}/>
         <QuestionsForCategory category={category} questions={questions}/>
-        <QuestionsByDifficulty questions={questions}/>
+        <div className="grid grid-cols-2">
+          <QuestionsByDifficulty questions={questions}/>
+          <QuestionsByCategory questions={questions}/>
+        </div>
       </header>
     </div>
   );
