@@ -3,7 +3,7 @@
 Navigate from the root of the repository to the app directory.
 
 ```
-cd ./app
+cd ./docs
 ```
 
 Then run
